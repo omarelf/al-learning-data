@@ -1,25 +1,27 @@
 {
   "expo": {
-    "name": "js-learning-app",
-    "slug": "js-learning-app",
+    "name": "AL Easy Learning",
+    "slug": "al-easy-learning",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#667eea"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jslearning.app"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#667eea"
       },
+      "package": "com.jslearning.app",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
