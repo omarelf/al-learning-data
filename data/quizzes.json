@@ -1,0 +1,980 @@
+[
+  {
+    "id": "quiz-1",
+    "lessonId": "1",
+    "questions": [
+      {
+        "id": "q1-1",
+        "question": "Which keyword should you use for a variable that will NOT be reassigned?",
+        "options": [
+          "var",
+          "let",
+          "const",
+          "static"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Use \"const\" for variables that won't be reassigned. It creates a read-only reference and is the default choice in modern JavaScript."
+      },
+      {
+        "id": "q1-2",
+        "question": "What is the result of: typeof null",
+        "options": [
+          "\"null\"",
+          "\"undefined\"",
+          "\"object\"",
+          "\"boolean\""
+        ],
+        "correctAnswer": 2,
+        "explanation": "This is a known JavaScript quirk. typeof null returns \"object\" due to a legacy bug that cannot be fixed without breaking existing code."
+      },
+      {
+        "id": "q1-3",
+        "question": "Which of these is NOT a primitive data type in JavaScript?",
+        "options": [
+          "String",
+          "Number",
+          "Array",
+          "Boolean"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Array is an object type, not a primitive. The 7 primitive types are: string, number, boolean, null, undefined, symbol, and bigint."
+      },
+      {
+        "id": "q1-4",
+        "question": "What happens when you try to change a property of a const object?",
+        "options": [
+          "Error: Cannot modify const",
+          "The property is successfully changed",
+          "The entire object becomes null",
+          "Nothing happens"
+        ],
+        "correctAnswer": 1,
+        "explanation": "const prevents reassignment of the variable, but does not make the object immutable. You can still modify properties, add new ones, or delete existing ones."
+      },
+      {
+        "id": "q1-5",
+        "question": "What is the main difference between let and var?",
+        "options": [
+          "let is faster than var",
+          "let is block-scoped, var is function-scoped",
+          "var is newer than let",
+          "There is no difference"
+        ],
+        "correctAnswer": 1,
+        "explanation": "let is block-scoped (limited to the block where it's declared), while var is function-scoped (available throughout the entire function). This makes let more predictable and less error-prone."
+      }
+    ]
+  },
+  {
+    "id": "quiz-2",
+    "lessonId": "2",
+    "questions": [
+      {
+        "id": "q2-1",
+        "question": "Which arrow function syntax is correct for returning a value directly?",
+        "options": [
+          "const add = (a, b) => { a + b }",
+          "const add = (a, b) => a + b",
+          "const add = (a, b) -> a + b",
+          "const add = a, b => a + b"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Arrow functions with a single expression can omit braces and the return keyword for implicit return: (a, b) => a + b"
+      },
+      {
+        "id": "q2-2",
+        "question": "What is a closure in JavaScript?",
+        "options": [
+          "A way to close browser windows",
+          "A function that has access to variables in its outer scope",
+          "A method to end function execution",
+          "A type of loop"
+        ],
+        "correctAnswer": 1,
+        "explanation": "A closure is a function that retains access to variables from its outer (enclosing) scope, even after the outer function has finished executing. This enables data privacy and function factories."
+      },
+      {
+        "id": "q2-3",
+        "question": "What does the rest parameter (...args) do?",
+        "options": [
+          "Pauses function execution",
+          "Spreads an array into individual elements",
+          "Collects all remaining arguments into an array",
+          "Makes the function sleep"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The rest parameter (...args) collects all remaining function arguments into a real array, making it easy to handle functions with variable numbers of parameters."
+      },
+      {
+        "id": "q2-4",
+        "question": "How does \"this\" behave in arrow functions?",
+        "options": [
+          "It has its own this binding",
+          "It inherits this from the parent scope",
+          "It is always undefined",
+          "It points to the global object"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Arrow functions don't have their own \"this\" binding. They lexically inherit \"this\" from the enclosing scope, which is particularly useful for callbacks and event handlers."
+      }
+    ]
+  },
+  {
+    "id": "quiz-3",
+    "lessonId": "3",
+    "questions": [
+      {
+        "id": "q3-1",
+        "question": "What does the map() method return?",
+        "options": [
+          "The original array",
+          "A new array with transformed elements",
+          "A single value",
+          "undefined"
+        ],
+        "correctAnswer": 1,
+        "explanation": "map() creates a new array with the results of calling a function on every element. The new array has the same length as the original."
+      },
+      {
+        "id": "q3-2",
+        "question": "Which method would you use to find the sum of all numbers in an array?",
+        "options": [
+          "map()",
+          "filter()",
+          "reduce()",
+          "find()"
+        ],
+        "correctAnswer": 2,
+        "explanation": "reduce() combines all elements into a single value by applying a function to each element and accumulating the result, making it perfect for summing numbers."
+      },
+      {
+        "id": "q3-3",
+        "question": "What does filter() do?",
+        "options": [
+          "Transforms each element",
+          "Returns elements that pass a test",
+          "Sorts the array",
+          "Finds the first match"
+        ],
+        "correctAnswer": 1,
+        "explanation": "filter() creates a new array containing only the elements that pass the test implemented by the provided function. Elements that return false are excluded."
+      },
+      {
+        "id": "q3-4",
+        "question": "What is the difference between slice() and splice()?",
+        "options": [
+          "slice() modifies the original, splice() doesn't",
+          "splice() modifies the original, slice() doesn't",
+          "They are the same",
+          "splice() is faster"
+        ],
+        "correctAnswer": 1,
+        "explanation": "splice() modifies the original array by adding/removing elements, while slice() returns a new array without modifying the original. Remember: \"splice\" has a \"p\" for \"permanent change\"."
+      },
+      {
+        "id": "q3-5",
+        "question": "What does flat() do to nested arrays?",
+        "options": [
+          "Converts array to object",
+          "Removes duplicate elements",
+          "Flattens nested arrays into a single level",
+          "Sorts the array"
+        ],
+        "correctAnswer": 2,
+        "explanation": "flat() creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. flat(Infinity) flattens all levels."
+      }
+    ]
+  },
+  {
+    "id": "quiz-4",
+    "lessonId": "4",
+    "questions": [
+      {
+        "id": "q4-1",
+        "question": "What is the correct way to access a property with a space in its name?",
+        "options": [
+          "object.property name",
+          "object[\"property name\"]",
+          "object->property name",
+          "object::property name"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Bracket notation must be used for property names with spaces or special characters. Dot notation only works with valid identifier names."
+      },
+      {
+        "id": "q4-2",
+        "question": "What does Object.keys() return?",
+        "options": [
+          "An array of property values",
+          "An array of property names",
+          "An array of [key, value] pairs",
+          "A string of property names"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Object.keys() returns an array containing all of the object's own enumerable property names (keys)."
+      },
+      {
+        "id": "q4-3",
+        "question": "What does the spread operator do with objects?",
+        "options": [
+          "Deletes all properties",
+          "Creates a shallow copy",
+          "Converts object to array",
+          "Freezes the object"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The spread operator (...) creates a shallow copy of an object, copying all enumerable properties to a new object."
+      },
+      {
+        "id": "q4-4",
+        "question": "What is optional chaining (?.) used for?",
+        "options": [
+          "Checking if a value is null",
+          "Safely accessing nested properties",
+          "Creating optional properties",
+          "Deleting properties"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Optional chaining (?.) allows you to safely access deeply nested properties without having to check if each level exists, returning undefined if any part is null/undefined."
+      },
+      {
+        "id": "q4-5",
+        "question": "In destructuring, what does { name: userName } do?",
+        "options": [
+          "Creates a property called userName",
+          "Extracts name property and assigns it to userName variable",
+          "Renames the property in the object",
+          "Creates an error"
+        ],
+        "correctAnswer": 1,
+        "explanation": "This syntax extracts the \"name\" property from the object and assigns its value to a new variable called \"userName\". The original property name remains \"name\"."
+      }
+    ]
+  },
+  {
+    "id": "quiz-5",
+    "lessonId": "5",
+    "questions": [
+      {
+        "id": "q5-1",
+        "question": "What does the await keyword do?",
+        "options": [
+          "Creates a new Promise",
+          "Pauses execution until Promise resolves",
+          "Rejects a Promise",
+          "Chains Promises"
+        ],
+        "correctAnswer": 1,
+        "explanation": "await pauses the execution of an async function until the Promise is resolved or rejected, making asynchronous code look and behave more like synchronous code."
+      },
+      {
+        "id": "q5-2",
+        "question": "Where can you use the await keyword?",
+        "options": [
+          "Anywhere in JavaScript",
+          "Only in async functions",
+          "Only in Promises",
+          "Only in classes"
+        ],
+        "correctAnswer": 1,
+        "explanation": "await can only be used inside async functions (or at the top level in ES modules). Using it outside will result in a syntax error."
+      },
+      {
+        "id": "q5-3",
+        "question": "What does Promise.all() do?",
+        "options": [
+          "Waits for the first Promise to resolve",
+          "Waits for all Promises to resolve",
+          "Rejects all Promises",
+          "Cancels all Promises"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Promise.all() takes an array of Promises and returns a new Promise that resolves when all input Promises have resolved, or rejects if any Promise rejects."
+      },
+      {
+        "id": "q5-4",
+        "question": "What happens if you don't use try/catch with await?",
+        "options": [
+          "Nothing, errors are ignored",
+          "The application crashes",
+          "Unhandled Promise rejection",
+          "Errors are automatically caught"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Without try/catch, rejected Promises will result in unhandled Promise rejections, which can cause issues in your application. Always handle errors with try/catch or .catch()."
+      },
+      {
+        "id": "q5-5",
+        "question": "When should you use Promise.all() vs sequential awaits?",
+        "options": [
+          "Always use Promise.all()",
+          "When operations are independent and can run in parallel",
+          "When one operation depends on another",
+          "Never use Promise.all()"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Use Promise.all() when operations are independent and can run concurrently for better performance. Use sequential awaits when one operation depends on the result of another."
+      }
+    ]
+  },
+  {
+    "id": "quiz-6",
+    "lessonId": "6",
+    "questions": [
+      {
+        "id": "q6-1",
+        "question": "What is the correct syntax for template literals?",
+        "options": [
+          "\"Hello ${name}\"",
+          "'Hello ${name}'",
+          "`Hello ${name}`",
+          "<Hello ${name}>"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Template literals use backticks (`) and allow string interpolation with ${expression} syntax."
+      },
+      {
+        "id": "q6-2",
+        "question": "What does the spread operator do with arrays?",
+        "options": [
+          "Deletes all elements",
+          "Expands array elements",
+          "Sorts the array",
+          "Reverses the array"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The spread operator (...) expands an array's elements, allowing you to copy arrays, merge arrays, or pass array elements as individual arguments."
+      },
+      {
+        "id": "q6-3",
+        "question": "What is the difference between let and const?",
+        "options": [
+          "let is faster",
+          "const cannot be reassigned, let can",
+          "const is block-scoped, let is not",
+          "No difference"
+        ],
+        "correctAnswer": 1,
+        "explanation": "const creates a binding that cannot be reassigned, while let creates a binding that can be reassigned. Both are block-scoped."
+      },
+      {
+        "id": "q6-4",
+        "question": "What does array destructuring allow you to do?",
+        "options": [
+          "Delete array elements",
+          "Sort array elements",
+          "Extract values into variables",
+          "Combine arrays"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Array destructuring allows you to unpack values from arrays into distinct variables in a single statement."
+      },
+      {
+        "id": "q6-5",
+        "question": "What is the property shorthand in objects?",
+        "options": [
+          "A way to delete properties",
+          "Omitting the value when it matches the variable name",
+          "Making properties private",
+          "Renaming properties"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Property shorthand allows you to write { name } instead of { name: name } when the property name and variable name are the same."
+      }
+    ]
+  },
+  {
+    "id": "quiz-7",
+    "lessonId": "7",
+    "questions": [
+      {
+        "id": "q7-1",
+        "question": "What keyword is used to create a subclass?",
+        "options": [
+          "inherit",
+          "extends",
+          "implements",
+          "derive"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The \"extends\" keyword is used to create a class that is a child of another class, establishing an inheritance relationship."
+      },
+      {
+        "id": "q7-2",
+        "question": "What does the super keyword do?",
+        "options": [
+          "Deletes the parent class",
+          "Calls methods from the parent class",
+          "Makes the class more powerful",
+          "Creates a new class"
+        ],
+        "correctAnswer": 1,
+        "explanation": "super is used to call methods (including the constructor) from the parent class. It's required when using a constructor in a subclass."
+      },
+      {
+        "id": "q7-3",
+        "question": "How do you create a private field in a class?",
+        "options": [
+          "Use the private keyword",
+          "Prefix with underscore _",
+          "Prefix with hash #",
+          "Use a special method"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Private fields in JavaScript classes are created by prefixing the field name with a hash symbol (#). They are truly private and cannot be accessed outside the class."
+      },
+      {
+        "id": "q7-4",
+        "question": "What is a static method?",
+        "options": [
+          "A method that never changes",
+          "A method called on the class itself, not instances",
+          "A method that doesn't move",
+          "A private method"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Static methods are called on the class itself rather than on instances. They're useful for utility functions related to the class."
+      },
+      {
+        "id": "q7-5",
+        "question": "What is the purpose of getters and setters?",
+        "options": [
+          "To get and set the class name",
+          "To control access to properties",
+          "To create new properties",
+          "To delete properties"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Getters and setters provide controlled access to object properties, allowing you to add validation, computed values, or other logic when getting or setting property values."
+      }
+    ]
+  },
+  {
+    "id": "quiz-8",
+    "lessonId": "8",
+    "questions": [
+      {
+        "id": "q8-1",
+        "question": "What block is used to handle errors in JavaScript?",
+        "options": [
+          "try/catch",
+          "if/else",
+          "switch/case",
+          "do/while"
+        ],
+        "correctAnswer": 0,
+        "explanation": "try/catch blocks are used to handle errors. Code that might throw an error goes in the try block, and error handling goes in the catch block."
+      },
+      {
+        "id": "q8-2",
+        "question": "What does the finally block do?",
+        "options": [
+          "Only runs if there's an error",
+          "Only runs if there's no error",
+          "Always runs, regardless of errors",
+          "Never runs"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The finally block always executes after try and catch, regardless of whether an error occurred. It's useful for cleanup operations."
+      },
+      {
+        "id": "q8-3",
+        "question": "How do you create a custom error?",
+        "options": [
+          "Use the Error() function",
+          "Extend the Error class",
+          "Use throw \"error\"",
+          "Call error.create()"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Custom errors are created by extending the built-in Error class, allowing you to create application-specific error types with custom properties and behavior."
+      },
+      {
+        "id": "q8-4",
+        "question": "What happens if you don't catch an error?",
+        "options": [
+          "The error is ignored",
+          "The program crashes/stops execution",
+          "The error is automatically fixed",
+          "Nothing happens"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Uncaught errors will cause the program to stop execution (in Node.js) or be reported as unhandled errors (in browsers). Always handle errors appropriately."
+      },
+      {
+        "id": "q8-5",
+        "question": "How do you handle errors in async/await?",
+        "options": [
+          "Use .catch()",
+          "Use try/catch",
+          "Errors are automatic",
+          "Use finally"
+        ],
+        "correctAnswer": 1,
+        "explanation": "With async/await, you use try/catch blocks to handle errors. The catch block will catch any rejected Promises from the awaited expressions."
+      }
+    ]
+  },
+  {
+    "id": "quiz-9",
+    "lessonId": "9",
+    "questions": [
+      {
+        "id": "q9-1",
+        "question": "What is a closure?",
+        "options": [
+          "A function that closes files",
+          "A function that remembers its outer scope",
+          "A way to end a program",
+          "A type of loop"
+        ],
+        "correctAnswer": 1,
+        "explanation": "A closure is a function that has access to variables from its outer (enclosing) lexical scope, even after the outer function has finished executing."
+      },
+      {
+        "id": "q9-2",
+        "question": "What is lexical scope?",
+        "options": [
+          "Global scope only",
+          "Scope determined by where variables are declared",
+          "Scope determined at runtime",
+          "No scope at all"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Lexical scope means that scope is determined by where variables and blocks of code are written in the source code, not where they are called."
+      },
+      {
+        "id": "q9-3",
+        "question": "Why are closures useful for data privacy?",
+        "options": [
+          "They encrypt data",
+          "They hide variables from outer scope",
+          "They make variables global",
+          "They delete sensitive data"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Closures can create private variables that are only accessible through returned functions, providing encapsulation and data privacy."
+      },
+      {
+        "id": "q9-4",
+        "question": "What is memoization?",
+        "options": [
+          "Remembering variable names",
+          "Caching function results",
+          "Memorizing code",
+          "Saving files"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Memoization is an optimization technique that caches the results of expensive function calls and returns the cached result when the same inputs occur again."
+      },
+      {
+        "id": "q9-5",
+        "question": "What problem occurs with var in loops?",
+        "options": [
+          "Syntax error",
+          "All iterations share the same variable",
+          "Loop runs forever",
+          "No problem"
+        ],
+        "correctAnswer": 1,
+        "explanation": "var is function-scoped, not block-scoped, so all iterations of a loop share the same variable. Use let for proper block scoping in loops."
+      }
+    ]
+  },
+  {
+    "id": "quiz-10",
+    "lessonId": "10",
+    "questions": [
+      {
+        "id": "q10-1",
+        "question": "What is the syntax for a named export?",
+        "options": [
+          "default export const name",
+          "export const name",
+          "export default name",
+          "module.exports = name"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Named exports use the \"export\" keyword before the declaration: export const name = value. You can have multiple named exports per module."
+      },
+      {
+        "id": "q10-2",
+        "question": "How many default exports can a module have?",
+        "options": [
+          "Unlimited",
+          "One",
+          "Two",
+          "None"
+        ],
+        "correctAnswer": 1,
+        "explanation": "A module can have only one default export, but it can have multiple named exports alongside the default export."
+      },
+      {
+        "id": "q10-3",
+        "question": "What does import * as name do?",
+        "options": [
+          "Imports only the default export",
+          "Imports all named exports as a namespace object",
+          "Deletes all exports",
+          "Creates a new module"
+        ],
+        "correctAnswer": 1,
+        "explanation": "import * as name imports all named exports from a module and groups them under a namespace object."
+      },
+      {
+        "id": "q10-4",
+        "question": "What are dynamic imports used for?",
+        "options": [
+          "Static code analysis",
+          "Loading modules conditionally or lazily",
+          "Deleting modules",
+          "Renaming modules"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Dynamic imports (import()) allow you to load modules conditionally or on-demand, enabling code splitting and lazy loading."
+      },
+      {
+        "id": "q10-5",
+        "question": "What is tree shaking?",
+        "options": [
+          "Shaking your computer",
+          "Removing unused exports during bundling",
+          "Randomizing code",
+          "Testing modules"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Tree shaking is a build optimization that removes unused exports from your final bundle, reducing the size of your application."
+      }
+    ]
+  },
+  {
+    "id": "quiz-11",
+    "lessonId": "11",
+    "questions": [
+      {
+        "id": "q11-1",
+        "question": "Which method selects the first matching element?",
+        "options": [
+          "querySelectorAll()",
+          "querySelector()",
+          "getElementById()",
+          "getElementsByClassName()"
+        ],
+        "correctAnswer": 1,
+        "explanation": "querySelector() returns the first element that matches the specified CSS selector, or null if no match is found."
+      },
+      {
+        "id": "q11-2",
+        "question": "What is the difference between textContent and innerHTML?",
+        "options": [
+          "No difference",
+          "textContent is plain text, innerHTML parses HTML",
+          "innerHTML is faster",
+          "textContent doesn't work"
+        ],
+        "correctAnswer": 1,
+        "explanation": "textContent sets or gets plain text content, while innerHTML parses and sets HTML. Use textContent for security and performance unless you need HTML."
+      },
+      {
+        "id": "q11-3",
+        "question": "What does classList.toggle() do?",
+        "options": [
+          "Adds a class",
+          "Removes a class",
+          "Adds if absent, removes if present",
+          "Renames a class"
+        ],
+        "correctAnswer": 2,
+        "explanation": "classList.toggle() adds the class if it's not present, or removes it if it is present. It's useful for toggling states like \"active\"."
+      },
+      {
+        "id": "q11-4",
+        "question": "What is event delegation?",
+        "options": [
+          "Deleting events",
+          "Attaching listener to parent instead of children",
+          "Creating new events",
+          "Renaming events"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Event delegation attaches a single event listener to a parent element to handle events from child elements, which is more efficient than adding listeners to each child."
+      },
+      {
+        "id": "q11-5",
+        "question": "What does createElement() do?",
+        "options": [
+          "Selects an existing element",
+          "Creates a new DOM element",
+          "Deletes an element",
+          "Copies an element"
+        ],
+        "correctAnswer": 1,
+        "explanation": "document.createElement() creates a new HTML element that can be configured and then added to the DOM using methods like appendChild()."
+      }
+    ]
+  },
+  {
+    "id": "quiz-12",
+    "lessonId": "12",
+    "questions": [
+      {
+        "id": "q12-1",
+        "question": "What is the difference between localStorage and sessionStorage?",
+        "options": [
+          "No difference",
+          "localStorage persists, sessionStorage clears on tab close",
+          "sessionStorage is faster",
+          "localStorage is bigger"
+        ],
+        "correctAnswer": 1,
+        "explanation": "localStorage persists until explicitly cleared, while sessionStorage clears when the browser tab/window is closed."
+      },
+      {
+        "id": "q12-2",
+        "question": "What type of data can localStorage store?",
+        "options": [
+          "Any JavaScript object",
+          "Only strings",
+          "Only numbers",
+          "Only arrays"
+        ],
+        "correctAnswer": 1,
+        "explanation": "localStorage can only store strings. To store objects or arrays, you must use JSON.stringify() to convert them to strings first."
+      },
+      {
+        "id": "q12-3",
+        "question": "How do you store an object in localStorage?",
+        "options": [
+          "localStorage.setItem(key, object)",
+          "localStorage.setItem(key, JSON.stringify(object))",
+          "localStorage.object = object",
+          "localStorage.save(object)"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Objects must be converted to strings using JSON.stringify() before storing in localStorage. Use JSON.parse() when retrieving them."
+      },
+      {
+        "id": "q12-4",
+        "question": "What happens if localStorage is full?",
+        "options": [
+          "Old data is deleted",
+          "QuotaExceededError is thrown",
+          "New data overwrites old data",
+          "Nothing happens"
+        ],
+        "correctAnswer": 1,
+        "explanation": "When storage quota is exceeded, a QuotaExceededError (or DOMException) is thrown. Always implement error handling for storage operations."
+      },
+      {
+        "id": "q12-5",
+        "question": "Is it safe to store passwords in localStorage?",
+        "options": [
+          "Yes, it's encrypted",
+          "No, it's vulnerable to XSS attacks",
+          "Yes, if using HTTPS",
+          "Yes, it's private"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Never store sensitive data like passwords or tokens in localStorage. It's accessible to any JavaScript code and vulnerable to XSS attacks."
+      }
+    ]
+  },
+  {
+    "id": "quiz-13",
+    "lessonId": "13",
+    "questions": [
+      {
+        "id": "q13-1",
+        "question": "What does the regex /\\d+/ match?",
+        "options": [
+          "One or more letters",
+          "One or more digits",
+          "Exactly one digit",
+          "Any character"
+        ],
+        "correctAnswer": 1,
+        "explanation": "\\d matches any digit (0-9), and the + quantifier means one or more occurrences, so /\\d+/ matches sequences of one or more digits."
+      },
+      {
+        "id": "q13-2",
+        "question": "What does the ^ anchor represent?",
+        "options": [
+          "End of string",
+          "Start of string",
+          "Word boundary",
+          "Any character"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The ^ anchor matches the start of a string. When used as /^pattern/, it ensures the pattern matches at the beginning of the string."
+      },
+      {
+        "id": "q13-3",
+        "question": "What is the difference between test() and match()?",
+        "options": [
+          "No difference",
+          "test() returns boolean, match() returns array",
+          "match() is faster",
+          "test() modifies the string"
+        ],
+        "correctAnswer": 1,
+        "explanation": "test() returns true/false indicating if a match exists, while match() returns an array of matches (or null if no match)."
+      },
+      {
+        "id": "q13-4",
+        "question": "What does the g flag do?",
+        "options": [
+          "Case-insensitive matching",
+          "Global matching (find all matches)",
+          "Greedy matching",
+          "Group matching"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The g (global) flag makes the regex find all matches in the string, not just the first one."
+      },
+      {
+        "id": "q13-5",
+        "question": "What does [^abc] match?",
+        "options": [
+          "a, b, or c",
+          "Any character except a, b, or c",
+          "Start of string",
+          "End of string"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Inside square brackets, ^ means negation. [^abc] matches any character that is NOT a, b, or c."
+      }
+    ]
+  },
+  {
+    "id": "quiz-14",
+    "lessonId": "14",
+    "questions": [
+      {
+        "id": "q14-1",
+        "question": "What does fetch() return?",
+        "options": [
+          "The response data",
+          "A Promise",
+          "An error",
+          "Nothing"
+        ],
+        "correctAnswer": 1,
+        "explanation": "fetch() returns a Promise that resolves to the Response object representing the response to the request."
+      },
+      {
+        "id": "q14-2",
+        "question": "How do you check if a fetch request was successful?",
+        "options": [
+          "Check response.success",
+          "Check response.ok",
+          "Check response.status === 200",
+          "Fetch always succeeds"
+        ],
+        "correctAnswer": 1,
+        "explanation": "response.ok is a boolean that is true if the response status is in the range 200-299. Always check this before processing the response."
+      },
+      {
+        "id": "q14-3",
+        "question": "How do you send JSON data in a POST request?",
+        "options": [
+          "Set body to the object directly",
+          "Use JSON.stringify() and set Content-Type header",
+          "Use JSON.parse()",
+          "Fetch automatically handles it"
+        ],
+        "correctAnswer": 1,
+        "explanation": "To send JSON, you must stringify the object with JSON.stringify() and set the Content-Type header to \"application/json\"."
+      },
+      {
+        "id": "q14-4",
+        "question": "What is AbortController used for?",
+        "options": [
+          "Retrying requests",
+          "Canceling fetch requests",
+          "Speeding up requests",
+          "Logging requests"
+        ],
+        "correctAnswer": 1,
+        "explanation": "AbortController allows you to cancel one or more fetch requests when needed, which is useful for implementing timeouts or cleaning up pending requests."
+      },
+      {
+        "id": "q14-5",
+        "question": "Does fetch() reject on HTTP error statuses (like 404)?",
+        "options": [
+          "Yes, always",
+          "No, only on network failures",
+          "Only on 500 errors",
+          "Yes, but only 404"
+        ],
+        "correctAnswer": 1,
+        "explanation": "fetch() only rejects on network failures. HTTP error statuses (4xx, 5xx) are considered successful responses - you must check response.ok yourself."
+      }
+    ]
+  },
+  {
+    "id": "quiz-15",
+    "lessonId": "15",
+    "questions": [
+      {
+        "id": "q15-1",
+        "question": "What is debouncing?",
+        "options": [
+          "Running a function immediately",
+          "Delaying function execution until after a pause",
+          "Running a function repeatedly",
+          "Canceling all functions"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Debouncing delays function execution until after a specified time has passed since the last invocation. It's useful for search inputs and resize events."
+      },
+      {
+        "id": "q15-2",
+        "question": "What is throttling?",
+        "options": [
+          "Stopping all execution",
+          "Limiting function execution rate",
+          "Speeding up functions",
+          "Deleting functions"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Throttling limits how often a function can execute, ensuring it runs at most once per specified time period. It's useful for scroll and mouse move handlers."
+      },
+      {
+        "id": "q15-3",
+        "question": "What is memoization used for?",
+        "options": [
+          "Memorizing code",
+          "Caching expensive function results",
+          "Deleting variables",
+          "Creating functions"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Memoization caches the results of expensive function calls and returns the cached result when the same inputs occur again, improving performance."
+      },
+      {
+        "id": "q15-4",
+        "question": "Why is event delegation more efficient?",
+        "options": [
+          "It's faster to write",
+          "Uses one listener instead of many",
+          "It prevents all events",
+          "It deletes events"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Event delegation uses a single event listener on a parent element instead of multiple listeners on child elements, reducing memory usage and improving performance."
+      },
+      {
+        "id": "q15-5",
+        "question": "What is the purpose of Document Fragment?",
+        "options": [
+          "Breaking documents",
+          "Building DOM offline to minimize reflows",
+          "Deleting DOM elements",
+          "Copying documents"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Document Fragment allows you to build DOM structures in memory and add them to the document in a single operation, minimizing expensive reflows and repaints."
+      }
+    ]
+  }
+]
